@@ -118,10 +118,9 @@ static contextType =ApiContext;
                     id='new-folder-name' 
                     name='new-folder-name' 
                     onChange = {e=> this.updateFolderName(e.target.value.trim())}/>
-                    {this.state.touched && <ValidationError message={this.validateFolderName()} />}
                 </div>
                 <div>
-
+                    {this.state.touched && <ValidationError message={this.validateFolderName()} />}
                     <button onClick={this.handleClickCancel}>
                         Cancel
                     </button>

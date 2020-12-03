@@ -94,7 +94,6 @@ validateNoteName(){
                         id='new-note-name' 
                         name='new-note-name' 
                         onChange = {e=> this.updateNoteName(e.target.value.trim())}/>
-                        {this.state.touched && <ValidationError message={this.validateNoteName()} />}
                     </div>
                     <div>
                         <label htmlFor="new-note-content">Content</label>
@@ -112,6 +111,7 @@ validateNoteName(){
                         </select>
                     </div>
                     <div>
+                        {this.state.touched && <ValidationError message={this.validateNoteName()} />}
                         <button onClick={this.handleClickCancel}>
                           Cancel
                         </button>
